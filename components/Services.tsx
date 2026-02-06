@@ -1,28 +1,29 @@
 import React from 'react';
+import { Mail, Video, Database, LineChart } from 'lucide-react';
 
 const SERVICE_ITEMS = [
   {
     title: "Cold E-mail Mastery",
     desc: "Bespoke outbound campaigns that feel personal because they are—powered by fine-tuned LLMs.",
-    icon: "✉️",
+    icon: <Mail className="w-6 h-6 text-white" />,
     color: "from-indigo-500 to-blue-600"
   },
   {
     title: "AI UGC Ads",
     desc: "Generate high-converting video creative at scale using AI avatars and voice-cloning technology.",
-    icon: "🎥",
+    icon: <Video className="w-6 h-6 text-white" />,
     color: "from-emerald-500 to-teal-600"
   },
   {
     title: "Automated CRM",
     desc: "A self-healing pipeline that updates itself, qualifies leads, and triggers perfect follow-ups.",
-    icon: "🏗️",
+    icon: <Database className="w-6 h-6 text-white" />,
     color: "from-amber-500 to-orange-600"
   },
   {
     title: "AI SEO Engine",
     desc: "Programmatic content strategy that dominates search intent and outpaces human competitors.",
-    icon: "📈",
+    icon: <LineChart className="w-6 h-6 text-white" />,
     color: "from-purple-500 to-indigo-600"
   }
 ];
@@ -43,7 +44,7 @@ export const Services: React.FC = () => {
           {SERVICE_ITEMS.map((item, idx) => (
             <div key={idx} className="border-beam group hover:-translate-y-2 transition-all duration-500 shadow-xl shadow-slate-200/40">
               <div className="p-10 h-full flex flex-col relative z-10">
-                <div className={`w-14 h-14 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center text-3xl text-white mb-8 shadow-lg shadow-indigo-100`}>
+                <div className={`w-14 h-14 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-100`}>
                   {item.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">{item.title}</h3>
